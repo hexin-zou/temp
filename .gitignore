@@ -1,0 +1,56 @@
+# 环境文件
+/.conda/
+/.jdks/
+/.venv/
+/.idea/shelf/
+/.idea/workspace.xml
+/.idea/.cache/
+/.fastRequest/
+
+# 基于编辑器的 HTTP 客户端请求
+/.idea/httpRequests/
+
+# 数据源本地存储忽略的文件
+/.idea/dataSources/
+/.idea/dataSources.local.xml
+
+# java 模块 target 目标文件
+/lersosa-java/**/target/
+
+# vite 模块环境文件
+/lersosa-vite/**/node_modules/
+/lersosa-vite/**/dist/
+/lersosa-vite/**/package-lock.json
+/lersosa-vite/lersosa-vite-user/.next/
+
+# 编译生成的文件
+**/.flattened-pom.xml
+/lersosa-vite/lersosa-vite-admin/src/types/auto-imports.d.ts
+/lersosa-vite/lersosa-vite-admin/src/types/components.d.ts
+/lersosa-vite/lersosa-vite-user/public/sw.js
+/lersosa-vite/lersosa-vite-user/public/workbox-4754cb34.js
+
+# 日志文件
+/logs/
+/sessionStore/
+/derby.log
+
+# docker 环境文件
+/docker/**/
+/k8s/kuboard/kuboard-mariadb-data/
+
+# mlflow 运行环境
+/mlruns/
+
+# 证书文件
+/**/*.csr
+/**/*.srl
+/lersosa-java/lersosa-gateway/lersosa-gateway-api/src/main/resources/nacos-ca-key.pem
+/lersosa-java/lersosa-gateway/lersosa-gateway-api/src/main/resources/nacos-client-key.pem
+/**/*.p12
+
+# 构建文件
+/out/
+/lersosa-java/lersosa-visual/lersosa-visual-nacos/src/main/resources/nacos-server-key.pem
+/lersosa-java/lersosa-visual/lersosa-visual-nacos/src/main/resources/nacos-client-key.pem
+/lersosa-java/lersosa-visual/lersosa-visual-nacos/src/main/resources/nacos-ca-key.pem

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="GENERAL_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/.jdks" />
+      <excludeFolder url="file://$MODULE_DIR$/logs" />
+      <excludeFolder url="file://$MODULE_DIR$/work" />
+      <excludeFolder url="file://$MODULE_DIR$/docker/minio" />
+      <excludeFolder url="file://$MODULE_DIR$/docker/mysql" />
+      <excludeFolder url="file://$MODULE_DIR$/docker/redis" />
+      <excludeFolder url="file://$MODULE_DIR$/sessionStore" />
+      <excludeFolder url="file://$MODULE_DIR$/.conda" />
+      <excludeFolder url="file://$MODULE_DIR$/docker/elk" />
+      <excludeFolder url="file://$MODULE_DIR$/docker/grafana" />
+      <excludeFolder url="file://$MODULE_DIR$/docker/kafka" />
+      <excludeFolder url="file://$MODULE_DIR$/docker/prometheus" />
+      <excludeFolder url="file://$MODULE_DIR$/docker/rabbitmq" />
+      <excludeFolder url="file://$MODULE_DIR$/docker/rocketmq" />
+      <excludeFolder url="file://$MODULE_DIR$/docker/shardingproxy" />
+      <excludeFolder url="file://$MODULE_DIR$/docker/skywalking" />
+      <excludeFolder url="file://$MODULE_DIR$/mlruns" />
+      <excludeFolder url="file://$MODULE_DIR$/docker/lersosa" />
+      <excludeFolder url="file://$MODULE_DIR$/docker/nginx" />
+      <excludeFolder url="file://$MODULE_DIR$/.fastRequest" />
+      <excludeFolder url="file://$MODULE_DIR$/.idea/.cache" />
+      <excludeFolder url="file://$MODULE_DIR$/.idea/dataSources" />
+      <excludeFolder url="file://$MODULE_DIR$/k8s/kuboard/kuboard-mariadb-data" />
+      <excludeFolder url="file://$MODULE_DIR$/docker/sharding" />
+      <excludeFolder url="file://$MODULE_DIR$/.venv" />
+    </content>
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

@@ -1,0 +1,14 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="LersosaGrpcApplication-node-1" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" folderName="lersosa-service-cluster">
+    <envs>
+      <env name="SERVER_PORT" value="9403" />
+      <env name="SERVER_GRPC_PORT" value="6001" />
+    </envs>
+    <module name="lersosa-service-grpc-start" />
+    <option name="SHORTEN_COMMAND_LINE" value="ARGS_FILE" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="leyramu.framework.lersosa.grpc.LersosaGrpcApplication" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

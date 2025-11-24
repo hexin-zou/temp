@@ -1,0 +1,77 @@
+# =========================== 项目配置 ===========================
+lersosa-version: ${lersosa.version}
+spring-cloud-version: ${spring-cloud.version}
+spring-cloud-alibaba-version: ${spring-cloud-alibaba.version}
+
+# ========================== Jasypt 配置 ===========================
+jasypt:
+  encryptor:
+    algorithm: PBEWITHHMACSHA512ANDAES_256
+    password: @JASYPT-ENCRYPTOR-PASSWORD@
+
+# =========================== 服务器配置 ===========================
+server:
+  port: ${SERVER-PORT:7091}
+  ssl:
+    enabled: @SSL-ENABLED@
+    key-store: classpath:scg-keystore.p12
+    key-alias: ${spring.application.name}
+    key-store-type: PKCS12
+    key-store-password: Zcx@223852//
+  http2:
+    enabled: @SSL-ENABLED@
+  shutdown: graceful
+
+# =========================== Spring 配置 ===========================
+spring:
+  application:
+    # 应用名称
+    name: @pom.artifactId@
+  profiles:
+    # 环境配置
+    active: @PROFILE-ACTIVE@
+
+# =========================== 日志配置 ===========================
+logging:
+  config: classpath:logback-spring.xml
+  file:
+    path: ./logs/seata
+  extend:
+    logstash-appender:
+      destination: @LOGSTASH-ADDRESS@
+#    kafka-appender:
+#      bootstrap-servers: 127.0.0.1:9092
+#      topic: logback_to_logstash
+
+# ===========================  控制台配置 ===========================
+console:
+  user:
+    username: ${SEATA-USERNAME}
+    password: ${SEATA-PASSWORD}
+
+# =========================== Seata 配置 ===========================
+seata:
+  config:
+    type: nacos
+    nacos:
+      server-addr: ${NACOS-SERVER-ADDRESS}
+      username: ${NACOS-USERNAME}
+      password: ${NACOS-PASSWORD}
+      group: ${NACOS-VISUAL-GROUP}
+      namespace: ${NACOS-NAMESPACE}
+      data-id: ${spring.application.name}.properties
+  registry:
+    type: nacos
+    nacos:
+      application: ${spring.application.name}
+      server-addr: ${NACOS-SERVER-ADDRESS}
+      group: ${NACOS-VISUAL-GROUP}
+      namespace: ${NACOS-NAMESPACE}
+      username: ${NACOS-USERNAME}
+      password: ${NACOS-PASSWORD}
+      cluster: default
+  security:
+    secretKey: TGV5cmFtdV9MZXJzb3NhX0F1dGhvcl9CeV9NaXJhaXRvd2FfemN4
+    tokenValidityInMilliseconds: 1800000
+    ignore:
+      urls: /,/**/*.css,/**/*.js,/**/*.html,/**/*.map,/**/*.svg,/**/*.png,/**/*.jpeg,/**/*.ico,/api/v1/auth/login

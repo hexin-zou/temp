@@ -1,0 +1,107 @@
+ERROR:nacos.client:[do-sync-req] localhost:8848 maybe down, no server is currently available
+ERROR:nacos.client:[get-access-token] exception All server are not available occur
+Traceback (most recent call last):
+  File "D:\Temp\.venv\Lib\site-packages\nacos\client.py", line 866, in get_access_token
+    resp = self._do_sync_req("/nacos/v1/auth/login", None, params, None, self.default_timeout, "POST", "login")
+  File "D:\Temp\.venv\Lib\site-packages\nacos\client.py", line 742, in _do_sync_req
+    raise NacosRequestException("All server are not available")
+nacos.exception.NacosRequestException: All server are not available
+ERROR:nacos.client:[do-sync-req] localhost:8848 maybe down, no server is currently available
+ERROR:nacos.client:[get-access-token] exception All server are not available occur
+Traceback (most recent call last):
+  File "C:\Users\zou17\.conda\envs\Temp\Lib\site-packages\nacos\client.py", line 866, in get_access_token
+    resp = self._do_sync_req("/nacos/v1/auth/login", None, params, None, self.default_timeout, "POST", "login")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zou17\.conda\envs\Temp\Lib\site-packages\nacos\client.py", line 742, in _do_sync_req
+    raise NacosRequestException("All server are not available")
+nacos.exception.NacosRequestException: All server are not available
+ERROR:nacos.client:[do-sync-req] localhost:8848 maybe down, no server is currently available
+ERROR:nacos.client:[get-access-token] exception All server are not available occur
+Traceback (most recent call last):
+  File "C:\Users\zou17\.conda\envs\Temp\Lib\site-packages\nacos\client.py", line 864, in get_access_token
+    resp = self._do_sync_req("/nacos/v1/auth/login", None, params, None, self.default_timeout, "POST", "login")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zou17\.conda\envs\Temp\Lib\site-packages\nacos\client.py", line 742, in _do_sync_req
+    raise NacosRequestException("All server are not available")
+nacos.exception.NacosRequestException: All server are not available
+ERROR:nacos.client:[do-sync-req] lersosa-nacos:8848 maybe down, no server is currently available
+ERROR:nacos.client:[get-access-token] exception All server are not available occur
+Traceback (most recent call last):
+  File "C:\Users\zou17\.conda\envs\Temp\Lib\site-packages\nacos\client.py", line 864, in get_access_token
+    resp = self._do_sync_req("/nacos/v1/auth/login", None, params, None, self.default_timeout, "POST", "login")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zou17\.conda\envs\Temp\Lib\site-packages\nacos\client.py", line 742, in _do_sync_req
+    raise NacosRequestException("All server are not available")
+nacos.exception.NacosRequestException: All server are not available
+ERROR:nacos.client:[do-sync-req] localhost:8848 maybe down, no server is currently available
+ERROR:nacos.client:[send-heartbeat] exception All server are not available occur
+Traceback (most recent call last):
+  File "C:\Users\zou17\.conda\envs\Temp\Lib\site-packages\nacos\client.py", line 1195, in send_heartbeat
+    resp = self._do_sync_req("/nacos/v1/ns/instance/beat", None, params, None, self.default_timeout, "PUT",
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zou17\.conda\envs\Temp\Lib\site-packages\nacos\client.py", line 742, in _do_sync_req
+    raise NacosRequestException("All server are not available")
+nacos.exception.NacosRequestException: All server are not available
+ERROR:nacos.client:[do-sync-req] lersosa-nacos:8848 maybe down, no server is currently available
+ERROR:nacos.client:[get-access-token] exception All server are not available occur
+Traceback (most recent call last):
+  File "C:\Users\zou17\.conda\envs\temp\Lib\site-packages\nacos\client.py", line 866, in get_access_token
+    resp = self._do_sync_req("/nacos/v1/auth/login", None, params, None, self.default_timeout, "POST", "login")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zou17\.conda\envs\temp\Lib\site-packages\nacos\client.py", line 742, in _do_sync_req
+    raise NacosRequestException("All server are not available")
+nacos.exception.NacosRequestException: All server are not available
+ERROR:nacos.client:[do-sync-req] localhost:8848 maybe down, no server is currently available
+ERROR:nacos.client:[get-access-token] exception All server are not available occur
+Traceback (most recent call last):
+  File "C:\Users\zou17\.conda\envs\temp\Lib\site-packages\nacos\client.py", line 866, in get_access_token
+    resp = self._do_sync_req("/nacos/v1/auth/login", None, params, None, self.default_timeout, "POST", "login")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zou17\.conda\envs\temp\Lib\site-packages\nacos\client.py", line 742, in _do_sync_req
+    raise NacosRequestException("All server are not available")
+nacos.exception.NacosRequestException: All server are not available
+ERROR:nacos.client:[do-sync-req] localhost:8848 maybe down, no server is currently available
+ERROR:nacos.client:[remove-naming-instance] exception All server are not available occur
+Traceback (most recent call last):
+  File "C:\Users\zou17\.conda\envs\temp\Lib\site-packages\nacos\client.py", line 1026, in remove_naming_instance
+    resp = self._do_sync_req("/nacos/v1/ns/instance", None, params, None, self.default_timeout, "DELETE",
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zou17\.conda\envs\temp\Lib\site-packages\nacos\client.py", line 742, in _do_sync_req
+    raise NacosRequestException("All server are not available")
+nacos.exception.NacosRequestException: All server are not available
+ERROR:nacos.client:[do-sync-req] localhost:8848 maybe down, no server is currently available
+ERROR:nacos.client:[send-heartbeat] exception All server are not available occur
+Traceback (most recent call last):
+  File "C:\Users\zou17\.conda\envs\temp\Lib\site-packages\nacos\client.py", line 1197, in send_heartbeat
+    resp = self._do_sync_req("/nacos/v1/ns/instance/beat", None, params, None, self.default_timeout, "PUT",
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zou17\.conda\envs\temp\Lib\site-packages\nacos\client.py", line 742, in _do_sync_req
+    raise NacosRequestException("All server are not available")
+nacos.exception.NacosRequestException: All server are not available
+ERROR:nacos.client:[do-sync-req] localhost:8848 maybe down, no server is currently available
+ERROR:nacos.client:[remove-naming-instance] exception All server are not available occur
+Traceback (most recent call last):
+  File "C:\Users\zou17\.conda\envs\temp\Lib\site-packages\nacos\client.py", line 1026, in remove_naming_instance
+    resp = self._do_sync_req("/nacos/v1/ns/instance", None, params, None, self.default_timeout, "DELETE",
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zou17\.conda\envs\temp\Lib\site-packages\nacos\client.py", line 742, in _do_sync_req
+    raise NacosRequestException("All server are not available")
+nacos.exception.NacosRequestException: All server are not available
+ERROR:nacos.client:[do-sync-req] localhost:8848 maybe down, no server is currently available
+ERROR:nacos.client:[remove-naming-instance] exception All server are not available occur
+Traceback (most recent call last):
+  File "C:\Users\zou17\.conda\envs\temp\Lib\site-packages\nacos\client.py", line 1026, in remove_naming_instance
+    resp = self._do_sync_req("/nacos/v1/ns/instance", None, params, None, self.default_timeout, "DELETE",
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zou17\.conda\envs\temp\Lib\site-packages\nacos\client.py", line 742, in _do_sync_req
+    raise NacosRequestException("All server are not available")
+nacos.exception.NacosRequestException: All server are not available
+ERROR:nacos.client:[do-sync-req] localhost:8848 maybe down, no server is currently available
+ERROR:nacos.client:[remove-naming-instance] exception All server are not available occur
+Traceback (most recent call last):
+  File "C:\Users\zou17\.conda\envs\temp\Lib\site-packages\nacos\client.py", line 1026, in remove_naming_instance
+    resp = self._do_sync_req("/nacos/v1/ns/instance", None, params, None, self.default_timeout, "DELETE",
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zou17\.conda\envs\temp\Lib\site-packages\nacos\client.py", line 742, in _do_sync_req
+    raise NacosRequestException("All server are not available")
+nacos.exception.NacosRequestException: All server are not available

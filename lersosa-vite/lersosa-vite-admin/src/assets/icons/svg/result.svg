@@ -1,0 +1,24 @@
+<?xml version="1.0" standalone="no"?><!--
+  - Copyright (c) 2025 Leyramu Group. All rights reserved.
+  - Licensed under the Apache License, Version 2.0 (the "License");
+  - you may not use this file except in compliance with the License.
+  - You may obtain a copy of the License at
+  -
+  -      http://www.apache.org/licenses/LICENSE-2.0
+  -
+  - Unless required by applicable law or agreed to in writing, software
+  - distributed under the License is distributed on an "AS IS" BASIS,
+  - WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  - See the License for the specific language governing permissions and
+  - limitations under the License.
+  -
+  - This project (Lersosa), including its source code, documentation, and any associated materials, is the intellectual property of Leyramu. No part of this software may be reproduced, distributed, or transmitted in any form or by any means, including photocopying, recording, or other electronic or mechanical methods, without the prior written permission of the copyright owner, Miraitowa_zcx, except in the case of brief quotations embodied in critical reviews and certain other noncommercial uses permitted by copyright law.
+  -
+  - For inquiries related to licensing or usage outside the scope of this notice, please contact the copyright holder at 2038322151@qq.com.
+  -
+  - The author disclaims all warranties, express or implied, including but not limited to the warranties of merchantability and fitness for a particular purpose. Under no circumstances shall the author be liable for any special, incidental, indirect, or consequential damages arising from the use of this software.
+  -
+  - By using this project, users acknowledge and agree to abide by these terms and conditions.
+  -->
+
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1742120686429" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="9758" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"><path d="M650.8544 231.87456H324.44416c-18.0224 0-32.64512 14.45888-32.64512 32.27648s14.62272 32.27648 32.64512 32.27648h326.41024c18.0224 0 32.64512-14.45888 32.64512-32.27648s-14.62272-32.27648-32.64512-32.27648zM650.8544 382.40256H324.44416c-18.0224 0-32.64512 14.45888-32.64512 32.27648s14.62272 32.23552 32.64512 32.23552h326.41024c18.0224 0 32.64512-14.45888 32.64512-32.23552 0-17.8176-14.62272-32.27648-32.64512-32.27648zM476.7744 532.93056H324.44416c-18.0224 0-32.64512 14.45888-32.64512 32.27648s14.62272 32.27648 32.64512 32.27648h152.33024c18.0224 0 32.64512-14.45888 32.64512-32.27648s-14.62272-32.27648-32.64512-32.27648z" fill="#8a8a8a" p-id="9759"></path><path d="M835.82976 113.62304c0-17.8176-14.62272-32.27648-32.64512-32.27648H172.15488c-18.0224 0-32.64512 14.45888-32.64512 32.27648v795.648c0 17.8176 14.62272 32.27648 32.64512 32.27648h303.75936c17.28512 0 32.44032-13.02528 33.46432-30.26944 1.10592-18.71872-13.7216-34.24256-32.19456-34.24256H226.54976l-2.53952-0.16384c-10.97728-1.26976-19.21024-10.4448-19.21024-21.34016v-688.128l0.16384-2.49856c1.31072-10.81344 10.56768-19.00544 21.58592-19.00544h522.24c5.77536 0 11.30496 2.2528 15.40096 6.30784 4.096 4.01408 6.38976 9.50272 6.38976 15.19616v281.23136c0 0.08192 0.08192 0.16384 0.16384 0.16384h64.9216c0.08192 0 0.16384-0.08192 0.16384-0.16384V113.62304z" fill="#8a8a8a" p-id="9760"></path><path d="M803.18464 480.4608c-17.94048 0-32.64512-14.70464-32.64512-32.64512V368.06656c0-17.94048 14.70464-32.64512 32.64512-32.64512s32.64512 14.70464 32.64512 32.64512v79.74912c0 17.94048-14.70464 32.64512-32.64512 32.64512zM871.54688 645.61152L642.6624 874.496a31.694848 31.694848 0 0 1-44.81024 0 31.694848 31.694848 0 0 1 0-44.81024l228.88448-228.88448a31.694848 31.694848 0 0 1 44.81024 0 31.62112 31.62112 0 0 1 0 44.81024z" fill="#8a8a8a" p-id="9761"></path><path d="M594.7392 874.496l-99.328-99.328a31.694848 31.694848 0 0 1 0-44.81024 31.694848 31.694848 0 0 1 44.81024 0l99.328 99.328a31.694848 31.694848 0 0 1 0 44.81024 31.694848 31.694848 0 0 1-44.81024 0z" fill="#8a8a8a" p-id="9762"></path></svg>

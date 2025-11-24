@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+service Pulsar {
+    rpc PulsarMatcher (PulsarMatcherRequestList) returns (PulsarReply) {}
+    rpc PulsarScores (PulsarScoresRequestList) returns (PulsarReply) {}
+}
+
+message PulsarMatcherRequestList {
+    repeated PulsarMatcherRequest pulsar = 1;
+}
+
+message PulsarScoresRequestList {
+    repeated PulsarScoresRequest pulsar = 1;
+}
+
+message PulsarMatcherRequest {
+    int64 id = 1;
+    string tenant_id = 2;
+    string name = 3;
+    string period = 4;
+    string dispersion_measure = 5;
+    string ra_deg = 6;
+    string dec_deg = 7;
+    double galactic_longitude = 8;
+    double galactic_latitude = 9;
+    string profiles_shape = 10;
+    double folding_period = 11;
+    string discoverer = 12;
+}
+
+message PulsarScoresRequest {
+    string tenant_id = 1;
+    string file_name = 2;
+    string file_url = 3;
+    double score = 4;
+}
+
+message PulsarReply {
+    int32 code = 1;
+    string message = 2;
+}

@@ -1,0 +1,13 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="LersosaResourceApplication-node-2" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" folderName="lersosa-service-cluster">
+    <envs>
+      <env name="SERVER_PORT" value="9402" />
+    </envs>
+    <module name="lersosa-service-resource-start" />
+    <option name="SHORTEN_COMMAND_LINE" value="ARGS_FILE" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="leyramu.framework.lersosa.resource.LersosaResourceApplication" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

@@ -1,0 +1,60 @@
+# =========================== 项目配置 ===========================
+lersosa-version: ${lersosa.version}
+spring-cloud-version: ${spring-cloud.version}
+spring-cloud-alibaba-version: ${spring-cloud-alibaba.version}
+
+# =========================== 服务器配置 ===========================
+server:
+  port: ${SERVER-PORT:8800}
+  ssl:
+    enabled: @SSL-ENABLED@
+    key-store: classpath:scg-keystore.p12
+    key-alias: ${spring.application.name}
+    key-store-type: PKCS12
+    key-store-password: Zcx@223852//
+  http2:
+    enabled: @SSL-ENABLED@
+  shutdown: graceful
+  servlet:
+    context-path: /snail-job
+
+# =========================== Spring 配置 ===========================
+spring:
+  application:
+    # 应用名称
+    name: @pom.artifactId@
+  profiles:
+    # 环境配置
+    active: @PROFILE-ACTIVE@
+  web:
+    resources:
+      static-locations: classpath:admin/
+
+# =========================== MyBatis 配置 ===========================
+mybatis-plus:
+  typeAliasesPackage: com.aizuda.snailjob.template.datasource.persistence.po
+  global-config:
+    db-config:
+      where-strategy: NOT_EMPTY
+      capital-mode: false
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: true
+
+# =========================== 日志配置 ===========================
+logging:
+  config: classpath:logback-plus.xml
+
+# =========================== 监控配置 ===========================
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: ALWAYS
+    logfile:
+      external-file: ./logs/${spring.application.name}/console.log

@@ -1,0 +1,786 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+  ~ Copyright (c) 2023-2025 Leyramu Group. All rights reserved.
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  ~
+  ~ This project (Lersosa), including its source code, documentation, and any associated materials, is the intellectual property of Leyramu. No part of this software may be reproduced, distributed, or transmitted in any form or by any means, including photocopying, recording, or other electronic or mechanical methods, without the prior written permission of the copyright owner, Miraitowa_zcx, except in the case of brief quotations embodied in critical reviews and certain other noncommercial uses permitted by copyright law.
+  ~
+  ~ For inquiries related to licensing or usage outside the scope of this notice, please contact the copyright holder at 2038322151@qq.com.
+  ~
+  ~ The author disclaims all warranties, express or implied, including but not limited to the warranties of merchantability and fitness for a particular purpose. Under no circumstances shall the author be liable for any special, incidental, indirect, or consequential damages arising from the use of this software.
+  ~
+  ~ By using this project, users acknowledge and agree to abide by these terms and conditions.
+  -->
+
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <!--      模块版本号      -->
+    <modelVersion>4.0.0</modelVersion>
+
+    <!--      组织 ID      -->
+    <groupId>leyramu.framework</groupId>
+
+    <!--      工件 ID      -->
+    <artifactId>lersosa-java</artifactId>
+
+    <!--      版本号      -->
+    <version>${revision}</version>
+
+    <!--      打包方式      -->
+    <packaging>pom</packaging>
+
+    <!--      项目名称      -->
+    <name>Lersosa</name>
+
+    <!--      模块描述      -->
+    <description>多语言开发框架</description>
+
+    <!--      项目地址      -->
+    <url>https://github.com/Leyramu/Lersosa</url>
+
+    <!--      开发者      -->
+    <developers>
+        <!--      第一开发者      -->
+        <developer>
+            <id>Miraitowa-zcx</id>
+            <name>Miraitowa_zcx</name>
+            <email>2038322151@qq.com</email>
+            <url>https://github.com/Miraitowa-zcx</url>
+            <organization>leyramu</organization>
+            <organizationUrl>https://github.com/Leyramu</organizationUrl>
+            <timezone>+8</timezone>
+            <roles>
+                <role>admin</role>
+                <role>developer</role>
+                <role>maintainer</role>
+                <role>contributor</role>
+            </roles>
+        </developer>
+
+        <!--      第二开发者      -->
+        <developer>
+            <id>yuyeyuyy</id>
+            <name>Flipped_yuye</name>
+            <email>3267745251@qq.com</email>
+            <url>https://github.com/yuyeyuyy</url>
+            <organization>leyramu</organization>
+            <organizationUrl>https://github.com/Leyramu</organizationUrl>
+            <timezone>+8</timezone>
+            <roles>
+                <role>developer</role>
+                <role>maintainer</role>
+                <role>contributor</role>
+            </roles>
+        </developer>
+    </developers>
+
+    <!--      SCM 信息      -->
+    <scm>
+        <url>https://github.com/Leyramu/Lersosa</url>
+        <connection>git@github.com:Leyramu/Lersosa.git</connection>
+        <developerConnection>https://github.com/Leyramu</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+
+    <!--      子模块      -->
+    <modules>
+        <module>lersosa-visual</module>
+        <module>lersosa-service</module>
+        <module>lersosa-api</module>
+        <module>lersosa-common</module>
+        <module>lersosa-example</module>
+        <module>lersosa-gateway</module>
+        <module>lersosa-tool</module>
+    </modules>
+
+    <!--      属性      -->
+    <properties>
+        <revision>3.3.1</revision>
+        <java.version>23</java.version>
+        <lombok.version>1.18.36</lombok.version>
+        <lersosa.version>${revision}</lersosa.version>
+        <spring-boot.version>3.3.5</spring-boot.version>
+        <spring-cloud.version>2023.0.3</spring-cloud.version>
+        <encrypt.password>Zcx@223852//</encrypt.password>
+        <mapstruct-plus.version>1.4.5</mapstruct-plus.version>
+        <therapi-javadoc.version>0.15.0</therapi-javadoc.version>
+        <flatten-maven-plugin.version>1.3.0</flatten-maven-plugin.version>
+        <docker-maven-plugin.version>0.45.1</docker-maven-plugin.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven-surefire-plugin.version>3.1.2</maven-surefire-plugin.version>
+        <spring-cloud-alibaba.version>2023.0.1.2</spring-cloud-alibaba.version>
+        <mapstruct-plus.lombok.version>0.2.0</mapstruct-plus.lombok.version>
+        <maven-compiler-plugin.verison>3.13.0</maven-compiler-plugin.verison>
+        <maven-checkstyle-plugin.version>3.5.0</maven-checkstyle-plugin.version>
+        <class-winter-maven-plugin.version>2.9.6</class-winter-maven-plugin.version>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <spring-javaformat-maven-plugin.version>0.0.43</spring-javaformat-maven-plugin.version>
+    </properties>
+
+    <!--     Spring Cloud 依赖管理     -->
+    <dependencyManagement>
+        <dependencies>
+            <!--    Lersosa Common Alibaba Dependencies    -->
+            <dependency>
+                <groupId>leyramu.framework</groupId>
+                <artifactId>lersosa-common-alibaba</artifactId>
+                <version>${revision}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!--    Lersosa Common Bom      -->
+            <dependency>
+                <groupId>leyramu.framework</groupId>
+                <artifactId>lersosa-common-bom</artifactId>
+                <version>${revision}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!--    Lersosa Common Dependencies      -->
+            <dependency>
+                <groupId>leyramu.framework</groupId>
+                <artifactId>lersosa-common-dependencies</artifactId>
+                <version>${revision}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!--    Lersosa Api Bom      -->
+            <dependency>
+                <groupId>leyramu.framework</groupId>
+                <artifactId>lersosa-api-bom</artifactId>
+                <version>${revision}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!--    Spring Cloud  Dependencies    -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!--    Spring Boot Dependencies    -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+    <!--      项目配置      -->
+    <profiles>
+        <!--    开发环境    -->
+        <profile>
+            <id>dev</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <PROFILE-ACTIVE>dev</PROFILE-ACTIVE>
+                <SSL-ENABLED>false</SSL-ENABLED>
+                <DOCKER-BUILD-DISABLE>true</DOCKER-BUILD-DISABLE>
+                <DOCKER-PUSH-DISABLE>true</DOCKER-PUSH-DISABLE>
+                <DOCKER-NAMESPACE>namespace</DOCKER-NAMESPACE>
+                <DOCKER-USERNAME>username</DOCKER-USERNAME>
+                <DOCKER-PASSWORD>password</DOCKER-PASSWORD>
+                <DOCKER-REGISTRY>registry</DOCKER-REGISTRY>
+                <DOCKER-FROM>bellsoft/liberica-openjdk-alpine:23.0.1-cds</DOCKER-FROM>
+                <NACOS-SERVER-ADDRESS>127.0.0.1:8848</NACOS-SERVER-ADDRESS>
+                <NACOS-USERNAME>nacos</NACOS-USERNAME>
+                <NACOS-PASSWORD>Zcx@223852//</NACOS-PASSWORD>
+                <DATASOURCE-PLATFORM>mysql</DATASOURCE-PLATFORM>
+                <DATASOURCE-USERNAME-NACOS>root</DATASOURCE-USERNAME-NACOS>
+                <DATASOURCE-PASSWORD-NACOS>Zcx@223852//</DATASOURCE-PASSWORD-NACOS>
+                <DATASOURCE-DRIVER-CLASS-NAME>com.mysql.cj.jdbc.Driver</DATASOURCE-DRIVER-CLASS-NAME>
+                <DATASOURCE-URL-NACOS>jdbc:mysql://localhost:3306/lersosa-config?characterEncoding=utf8&amp;connectTimeout=1000&amp;socketTimeout=3000&amp;autoReconnect=true&amp;useUnicode=true&amp;useSSL=false&amp;serverTimezone=UTC&amp;allowPublicKeyRetrieval=true</DATASOURCE-URL-NACOS>
+                <NACOS-DEFAULT-GROUP>DEFAULT_GROUP</NACOS-DEFAULT-GROUP>
+                <NACOS-GATEWAY-GROUP>GATEWAY_GROUP</NACOS-GATEWAY-GROUP>
+                <NACOS-SERVICE-GROUP>SERVICE_GROUP</NACOS-SERVICE-GROUP>
+                <NACOS-VISUAL-GROUP>VISUAL_GROUP</NACOS-VISUAL-GROUP>
+                <NACOS-EXAMPLE-GROUP>EXAMPLE_GROUP</NACOS-EXAMPLE-GROUP>
+                <NACOS-NAMESPACE>106fdced-d95e-46db-b9f4-0abdce58a18b</NACOS-NAMESPACE>
+                <SEATA-USERNAME>seata</SEATA-USERNAME>
+                <SEATA-PASSWORD>Zcx@223852//</SEATA-PASSWORD>
+                <MONITOR-SERVER-URL>http://localhost:9120</MONITOR-SERVER-URL>
+                <MONITOR-SERVER-USERNAME>lersosa</MONITOR-SERVER-USERNAME>
+                <MONITOR-SERVER-PASSWORD>Zcx@223852//</MONITOR-SERVER-PASSWORD>
+                <JASYPT-ENCRYPTOR-PASSWORD>Zcx@223852//</JASYPT-ENCRYPTOR-PASSWORD>
+                <LOGSTASH-ADDRESS>localhost:4560</LOGSTASH-ADDRESS>
+            </properties>
+        </profile>
+
+        <!--    测试环境    -->
+        <profile>
+            <id>staging</id>
+            <properties>
+                <PROFILE-ACTIVE>staging</PROFILE-ACTIVE>
+                <SSL-ENABLED>false</SSL-ENABLED>
+                <DOCKER-BUILD-DISABLE>false</DOCKER-BUILD-DISABLE>
+                <DOCKER-PUSH-DISABLE>true</DOCKER-PUSH-DISABLE>
+                <DOCKER-NAMESPACE>namespace</DOCKER-NAMESPACE>
+                <DOCKER-USERNAME>username</DOCKER-USERNAME>
+                <DOCKER-PASSWORD>password</DOCKER-PASSWORD>
+                <DOCKER-REGISTRY>registry</DOCKER-REGISTRY>
+                <DOCKER-FROM>bellsoft/liberica-openjdk-alpine:23.0.1-cds</DOCKER-FROM>
+                <NACOS-SERVER-ADDRESS>
+                    ENC(H6qLFMq+tMIxYO2Yr/gifXKqQgmrXTBPMIL+nkVlkPoqOAlM+TokMaCvs8FQln0j)
+                </NACOS-SERVER-ADDRESS>
+                <NACOS-USERNAME>
+                    ENC(VP3usYtNi4cHVQ3oDfQH2m92pxep9HbsOCmI8GNWajOqnuJfMxoVQXbT2OGM+X1s)
+                </NACOS-USERNAME>
+                <NACOS-PASSWORD>
+                    ENC(rrds1uCe9JN1JGcTNg+ok62PW0ttaggVsjDiv9kQ7F3zL5hoVcJcqgRiH1PXpki+)
+                </NACOS-PASSWORD>
+                <DATASOURCE-USERNAME-NACOS>
+                    ENC(b79Tzr71k/z2iwN7jBpLa2wq3YR48TBENyMYfeEb67YGrPQAOoeSbGVKBmMZuEdh)
+                </DATASOURCE-USERNAME-NACOS>
+                <DATASOURCE-PASSWORD-NACOS>
+                    ENC(rrds1uCe9JN1JGcTNg+ok62PW0ttaggVsjDiv9kQ7F3zL5hoVcJcqgRiH1PXpki+)
+                </DATASOURCE-PASSWORD-NACOS>
+                <DATASOURCE-PLATFORM>mysql</DATASOURCE-PLATFORM>
+                <DATASOURCE-DRIVER-CLASS-NAME>com.mysql.cj.jdbc.Driver</DATASOURCE-DRIVER-CLASS-NAME>
+                <DATASOURCE-URL-NACOS>
+                    ENC(tyK7LtLm2XD+dA/5zkCRKH/ZXgl9L4EWaJx0oNiBuef6orMAOlI5+W68QKqXaBZvhAHc7Zao6q0iCieIxzufh7Pg1p+qSqnmGOp6RSJDi8s1qwl3pvtR0KPXwZef5QLGvQmNAXvoB76uGXPOdof6aaM5ugN69U8vJT/Zh6WOZl2TjUCVy9FQeHSfYCfw6cUnjATc+c6nQB50TjTyqNR6oLBFo453lax562zXBFQUuWDdbFQ7amYf+x6mCaVI2Pwp2/1tPRrr7dIjuvRbPauV5knkUD00RRQjvRVS2EP23hQD8vWjoRVRl37ZD+JpY+bW)
+                </DATASOURCE-URL-NACOS>
+                <NACOS-DEFAULT-GROUP>DEFAULT_GROUP</NACOS-DEFAULT-GROUP>
+                <NACOS-GATEWAY-GROUP>GATEWAY_GROUP</NACOS-GATEWAY-GROUP>
+                <NACOS-SERVICE-GROUP>SERVICE_GROUP</NACOS-SERVICE-GROUP>
+                <NACOS-VISUAL-GROUP>VISUAL_GROUP</NACOS-VISUAL-GROUP>
+                <NACOS-EXAMPLE-GROUP>EXAMPLE_GROUP</NACOS-EXAMPLE-GROUP>
+                <NACOS-NAMESPACE>
+                    ENC(LT/w8SoLGciqgL02gmdGn43IhM5cTDBzRoXZE9Tfr1Zyq/NLU9TXw7GTX28mpANcnQTdc2iT1eqe8nMN8v/EmDe6/Fl6Ya+MGf7nCfZ8YHA=)
+                </NACOS-NAMESPACE>
+                <SEATA-USERNAME>
+                    ENC(6AgrKT2DCanjQ5Z24KWFsh4gQFxlGvbiRWKMMO8heidP0qoPh31cdg3SWt0pfVUM)
+                </SEATA-USERNAME>
+                <SEATA-PASSWORD>
+                    ENC(rrds1uCe9JN1JGcTNg+ok62PW0ttaggVsjDiv9kQ7F3zL5hoVcJcqgRiH1PXpki+)
+                </SEATA-PASSWORD>
+                <MONITOR-SERVER-URL>
+                    ENC(UFuQ4u97LjqrVQKZFuJOCHCP9FnzhCrsg7QDx9K78PIc3r5WHbpXDXCH/YelXrB+CdH5gecxDyfvMgfFt/B1Pw==)
+                </MONITOR-SERVER-URL>
+                <MONITOR-SERVER-USERNAME>
+                    ENC(crqiDgmCZcsQYCDS+kCp698i7tjoDb5k2j4aJ1pNYgidY4rk0VJqoxEl2x766qaN)
+                </MONITOR-SERVER-USERNAME>
+                <MONITOR-SERVER-PASSWORD>
+                    ENC(rrds1uCe9JN1JGcTNg+ok62PW0ttaggVsjDiv9kQ7F3zL5hoVcJcqgRiH1PXpki+)
+                </MONITOR-SERVER-PASSWORD>
+                <LOGSTASH-ADDRESS>
+                    192.167.177.22:4560
+                </LOGSTASH-ADDRESS>
+                <JASYPT-ENCRYPTOR-PASSWORD>Zcx@223852//</JASYPT-ENCRYPTOR-PASSWORD>
+            </properties>
+        </profile>
+
+        <!--      生产环境      -->
+        <profile>
+            <id>prod</id>
+            <properties>
+                <PROFILE-ACTIVE>prod</PROFILE-ACTIVE>
+                <SSL-ENABLED>false</SSL-ENABLED>
+                <DOCKER-BUILD-DISABLE>false</DOCKER-BUILD-DISABLE>
+                <DOCKER-PUSH-DISABLE>false</DOCKER-PUSH-DISABLE>
+                <!--suppress UnresolvedMavenProperty >Docker 命名空间< -->
+                <DOCKER-NAMESPACE>
+                    ${env.DOCKER_NAMESPACE}
+                </DOCKER-NAMESPACE>
+                <!--suppress UnresolvedMavenProperty >Docker 用户名< -->
+                <DOCKER-USERNAME>
+                    ${env.DOCKER_USERNAME}
+                </DOCKER-USERNAME>
+                <!--suppress UnresolvedMavenProperty >Docker 密码< -->
+                <DOCKER-PASSWORD>
+                    ${env.DOCKER_PASSWORD}
+                </DOCKER-PASSWORD>
+                <!--suppress UnresolvedMavenProperty >Docker 仓库地址< -->
+                <DOCKER-REGISTRY>
+                    ${env.DOCKER_REGISTRY}
+                </DOCKER-REGISTRY>
+                <!--suppress UnresolvedMavenProperty >Docker 基础镜像< -->
+                <DOCKER-FROM>
+                    bellsoft/liberica-openjdk-alpine:23.0.1-cds
+                </DOCKER-FROM>
+                <!--suppress UnresolvedMavenProperty >Nacos 服务器地址< -->
+                <NACOS-SERVER-ADDRESS>
+                    ${NACOS_SERVER_ADDRESS:ENC(umxMm68DFU6F5KtPOnJTQrB4NWP0bgsyQ2uU0eLoNwMxG0XAVP8lWLyqnxC31oGqdXaAOL13F0ZI9wAe1IC+sw==)}
+                </NACOS-SERVER-ADDRESS>
+                <!--suppress UnresolvedMavenProperty >Nacos 用户名< -->
+                <NACOS-USERNAME>
+                    ${NACOS_USERNAME:ENC(VP3usYtNi4cHVQ3oDfQH2m92pxep9HbsOCmI8GNWajOqnuJfMxoVQXbT2OGM+X1s)}
+                </NACOS-USERNAME>
+                <!--suppress UnresolvedMavenProperty >Nacos 密码< -->
+                <NACOS-PASSWORD>
+                    ${NACOS_PASSWORD:ENC(rrds1uCe9JN1JGcTNg+ok62PW0ttaggVsjDiv9kQ7F3zL5hoVcJcqgRiH1PXpki+)}
+                </NACOS-PASSWORD>
+                <!--suppress UnresolvedMavenProperty >Nacos 数据库用户名< -->
+                <DATASOURCE-USERNAME-NACOS>
+                    ${DATASOURCE_USERNAME_NACOS:ENC(b79Tzr71k/z2iwN7jBpLa2wq3YR48TBENyMYfeEb67YGrPQAOoeSbGVKBmMZuEdh)}
+                </DATASOURCE-USERNAME-NACOS>
+                <!--suppress UnresolvedMavenProperty >Nacos 数据库密码< -->
+                <DATASOURCE-PASSWORD-NACOS>
+                    ${DATASOURCE_PASSWORD_NACOS:ENC(rrds1uCe9JN1JGcTNg+ok62PW0ttaggVsjDiv9kQ7F3zL5hoVcJcqgRiH1PXpki+)}
+                </DATASOURCE-PASSWORD-NACOS>
+                <!--suppress UnresolvedMavenProperty >Nacos 数据库驱动< -->
+                <DATASOURCE-DRIVER-CLASS-NAME>
+                    ${DATASOURCE_DRIVER_CLASS_NAME:com.mysql.cj.jdbc.Driver}
+                </DATASOURCE-DRIVER-CLASS-NAME>
+                <!--suppress UnresolvedMavenProperty >Nacos 数据库平台< -->
+                <DATASOURCE-PLATFORM>
+                    ${DATASOURCE_PLATFORM:mysql}
+                </DATASOURCE-PLATFORM>
+                <!--suppress UnresolvedMavenProperty >Nacos 数据库地址< -->
+                <DATASOURCE-URL-NACOS>
+                    ${DATASOURCE_URL_NACOS:ENC(dGjk4chZkbS6uV3SDphb7z03ejKluRqLfY3q8hGiqKpOD8WFKQl24o/qHZPeTkmwfFxJAn3wYYCq+Kt5ZC1tOZeGXNAwyvuQFyJDw/AZEj4Zkdq0S5og2nxTC+QX3Zc1MDhzC07tfLm1QxPBB8KQ7NReXKuxCHlQ/0ROWwKwFHBuEZy4DgM0cWl4wspzMwmd/MRk+5HvvjLjMn8eUbeQwSTT/+Nf0PHrWqZBw2rCnxHFc7E48p0vJ5VWpeAC403YTjGIGcbvRnEfZW1hawzMTCDBB7Umq+OWgSEiAoDVABlzaA8aFy9uFcqHxrfSCFSa)}
+                </DATASOURCE-URL-NACOS>
+                <!--suppress UnresolvedMavenProperty >Nacos 默认命名空间< -->
+                <NACOS-DEFAULT-GROUP>
+                    ${NACOS_DEFAULT_GROUP:DEFAULT_GROUP}
+                </NACOS-DEFAULT-GROUP>
+                <!--suppress UnresolvedMavenProperty >Nacos 网关命名空间< -->
+                <NACOS-GATEWAY-GROUP>
+                    ${NACOS_GATEWAY_GROUP:GATEWAY_GROUP}
+                </NACOS-GATEWAY-GROUP>
+                <!--suppress UnresolvedMavenProperty >Nacos 服务命名空间< -->
+                <NACOS-SERVICE-GROUP>
+                    ${NACOS_SERVICE_GROUP:SERVICE_GROUP}
+                </NACOS-SERVICE-GROUP>
+                <!--suppress UnresolvedMavenProperty >Nacos 可视化命名空间< -->
+                <NACOS-VISUAL-GROUP>
+                    ${NACOS_VISUAL_GROUP:VISUAL_GROUP}
+                </NACOS-VISUAL-GROUP>
+                <!--suppress UnresolvedMavenProperty >Nacos 示例命名空间< -->
+                <NACOS-EXAMPLE-GROUP>
+                    ${NACOS_EXAMPLE_GROUP:EXAMPLE_GROUP}
+                </NACOS-EXAMPLE-GROUP>
+                <!--suppress UnresolvedMavenProperty >Nacos 命名空间< -->
+                <NACOS-NAMESPACE>
+                    ${NACOS_NAMESPACE:ENC(hLFRNyq4BsiI9uYlyldUeQ4dnB39yHmJ4IIrm7nQ1owt5Nu4VlBL7hPoGZWYzhvInO7tEQwDcKomzuIwX3DKtohvF2BSIZZ3XVzHVt8w1Pw=)}
+                </NACOS-NAMESPACE>
+                <!--suppress UnresolvedMavenProperty >Seata 数据库用户名< -->
+                <SEATA-USERNAME>
+                    ${SEATA_USERNAME:ENC(6AgrKT2DCanjQ5Z24KWFsh4gQFxlGvbiRWKMMO8heidP0qoPh31cdg3SWt0pfVUM)}
+                </SEATA-USERNAME>
+                <!--suppress UnresolvedMavenProperty >Seata 数据库密码< -->
+                <SEATA-PASSWORD>
+                    ${SEATA_PASSWORD:ENC(rrds1uCe9JN1JGcTNg+ok62PW0ttaggVsjDiv9kQ7F3zL5hoVcJcqgRiH1PXpki+)}
+                </SEATA-PASSWORD>
+                <!--suppress UnresolvedMavenProperty >监控中心地址< -->
+                <MONITOR-SERVER-URL>
+                    ${MONITOR_SERVER_URL:ENC(d0NEza0jotK9agZXWrpJvoFX//s3KKStQ2Lze8exaWP2fLDoA3SPkxkw16lfKq/gUvFVyy9K45k4LeYURzYygQ==)}
+                </MONITOR-SERVER-URL>
+                <!--suppress UnresolvedMavenProperty >监控中心用户名< -->
+                <MONITOR-SERVER-USERNAME>
+                    ${MONITOR_SERVER_USERNAME:ENC(crqiDgmCZcsQYCDS+kCp698i7tjoDb5k2j4aJ1pNYgidY4rk0VJqoxEl2x766qaN)}
+                </MONITOR-SERVER-USERNAME>
+                <!--suppress UnresolvedMavenProperty >监控中心密码< -->
+                <MONITOR-SERVER-PASSWORD>
+                    ${MONITOR_SERVER_PASSWORD:ENC(rrds1uCe9JN1JGcTNg+ok62PW0ttaggVsjDiv9kQ7F3zL5hoVcJcqgRiH1PXpki+)}
+                </MONITOR-SERVER-PASSWORD>
+                <!--suppress UnresolvedMavenProperty >日志服务器地址< -->
+                <LOGSTASH-ADDRESS>
+                    lersosa-logstash:4560
+                </LOGSTASH-ADDRESS>
+                <!--suppress UnresolvedMavenProperty >Jasypt 密码< -->
+                <JASYPT-ENCRYPTOR-PASSWORD>
+                    ${JASYPT-ENCRYPTOR-PASSWORD:Zcx@223852//}
+                </JASYPT-ENCRYPTOR-PASSWORD>
+            </properties>
+        </profile>
+    </profiles>
+
+    <!--      构建插件      -->
+    <build>
+        <!--      插件管理      -->
+        <pluginManagement>
+            <plugins>
+                <!--      格式化插件      -->
+                <plugin>
+                    <groupId>io.spring.javaformat</groupId>
+                    <artifactId>spring-javaformat-maven-plugin</artifactId>
+                    <version>${spring-javaformat-maven-plugin.version}</version>
+                </plugin>
+
+                <!--      代码检查插件      -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-checkstyle-plugin</artifactId>
+                    <version>${maven-checkstyle-plugin.version}</version>
+                </plugin>
+
+                <!--      编译插件      -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${maven-compiler-plugin.verison}</version>
+                </plugin>
+
+                <!--      单元测试插件      -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>${maven-surefire-plugin.version}</version>
+                </plugin>
+
+                <!--      扁平化 pom 插件      -->
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>flatten-maven-plugin</artifactId>
+                    <version>${flatten-maven-plugin.version}</version>
+                </plugin>
+
+                <!--      打包插件      -->
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <version>${spring-boot.version}</version>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>repackage</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+
+                <!--      混淆插件      -->
+                <plugin>
+                    <groupId>com.idea-aedi</groupId>
+                    <artifactId>class-winter-maven-plugin</artifactId>
+                    <version>${class-winter-maven-plugin.version}</version>
+                    <configuration>
+                        <finalName>${project.build.finalName}</finalName>
+                        <password>${encrypt.password}</password>
+                        <includePrefix>${project.groupId}</includePrefix>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <phase>package</phase>
+                            <goals>
+                                <goal>class-winter</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+
+                <!--      docker 插件      -->
+                <plugin>
+                    <groupId>io.fabric8</groupId>
+                    <artifactId>docker-maven-plugin</artifactId>
+                    <version>${docker-maven-plugin.version}</version>
+                    <configuration>
+                        <registry>${DOCKER-FROM}</registry>
+                        <authConfig>
+                            <push>
+                                <username>${DOCKER-USERNAME}</username>
+                                <password>${DOCKER-PASSWORD}</password>
+                            </push>
+                        </authConfig>
+                        <images>
+                            <image>
+                                <name>
+                                    ${DOCKER-REGISTRY}/${DOCKER-NAMESPACE}/${project.build.finalName}:${project.version}
+                                </name>
+                                <alias>${project.build.finalName}</alias>
+                                <build>
+                                    <from>${DOCKER-FROM}</from>
+                                    <tags>
+                                        <tag>${project.version}</tag>
+                                    </tags>
+                                    <dockerFile>${project.basedir}/Dockerfile</dockerFile>
+                                </build>
+                            </image>
+                        </images>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <id>build</id>
+                            <phase>package</phase>
+                            <goals>
+                                <goal>build</goal>
+                            </goals>
+                            <configuration>
+                                <skip>${DOCKER-BUILD-DISABLE}</skip>
+                            </configuration>
+                        </execution>
+                        <execution>
+                            <id>push</id>
+                            <phase>package</phase>
+                            <goals>
+                                <goal>push</goal>
+                            </goals>
+                            <configuration>
+                                <skip>${DOCKER-PUSH-DISABLE}</skip>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+
+        <plugins>
+            <!--      格式化插件      -->
+            <plugin>
+                <groupId>io.spring.javaformat</groupId>
+                <artifactId>spring-javaformat-maven-plugin</artifactId>
+            </plugin>
+
+            <!--      代码检查插件      -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <configuration>
+                    <configLocation>../.idea/checkstyle/checkstyle.xml</configLocation>
+                    <consoleOutput>true</consoleOutput>
+                    <failsOnError>true</failsOnError>
+                    <failOnViolation>true</failOnViolation>
+                    <includeTestSourceDirectory>true</includeTestSourceDirectory>
+                    <skip>false</skip>
+                    <linkXRef>false</linkXRef>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>install</id>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>checkstyle</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!--      编译插件      -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>com.github.therapi</groupId>
+                            <artifactId>therapi-runtime-javadoc-scribe</artifactId>
+                            <version>${therapi-javadoc.version}</version>
+                        </path>
+                        <path>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                            <version>${lombok.version}</version>
+                        </path>
+                        <path>
+                            <groupId>org.springframework.boot</groupId>
+                            <artifactId>spring-boot-configuration-processor</artifactId>
+                            <version>${spring-boot.version}</version>
+                        </path>
+                        <path>
+                            <groupId>io.github.linpeilie</groupId>
+                            <artifactId>mapstruct-plus-processor</artifactId>
+                            <version>${mapstruct-plus.version}</version>
+                        </path>
+                        <path>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok-mapstruct-binding</artifactId>
+                            <version>${mapstruct-plus.lombok.version}</version>
+                        </path>
+                    </annotationProcessorPaths>
+                    <compilerArgs>
+                        <arg>-Xlint:-options</arg>
+                        <arg>-parameters</arg>
+                    </compilerArgs>
+                </configuration>
+            </plugin>
+
+            <!--      单元测试插件      -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <skip>false</skip>
+                    <argLine>-Dfile.encoding=UTF-8</argLine>
+                    <groups>${PROFILE-ACTIVE}</groups>
+                    <testFailureIgnore>true</testFailureIgnore>
+                    <excludedGroups>exclude</excludedGroups>
+                </configuration>
+            </plugin>
+
+            <!--      扁平化 pom 插件       -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>flatten-maven-plugin</artifactId>
+                <configuration>
+                    <updatePomFile>true</updatePomFile>
+                    <flattenMode>resolveCiFriendliesOnly</flattenMode>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>flatten</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>flatten</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>flatten.clean</id>
+                        <phase>clean</phase>
+                        <goals>
+                            <goal>clean</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+
+        <!--       资源过滤      -->
+        <resources>
+            <!--      添加需要排除的文件      -->
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>false</filtering>
+            </resource>
+            <resource>
+                <directory>src/main/webapp/</directory>
+            </resource>
+
+            <!--      添加需要包含的文件      -->
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>application*</include>
+                    <include>bootstrap*</include>
+                    <include>logback*</include>
+                </includes>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+    </build>
+
+    <!--      仓库      -->
+    <repositories>
+        <!--      华为云仓库      -->
+        <repository>
+            <id>huawei</id>
+            <name>huawei nexus</name>
+            <url>https://mirrors.huaweicloud.com/repository/maven/</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+
+        <!--      Spring Milestones      -->
+        <repository>
+            <id>spring-milestones</id>
+            <name>Spring Milestones</name>
+            <url>https://repo.spring.io/milestone</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+
+        <!--      阿里云仓库      -->
+        <repository>
+            <id>aliyun nexus</id>
+            <name>aliyun nexus</name>
+            <url>https://maven.aliyun.com/repository/public</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+
+        <!--      Maven 仓库      -->
+        <repository>
+            <id>central</id>
+            <name>Maven Central</name>
+            <url>https://repo1.maven.org/maven2</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <!--      插件仓库      -->
+    <pluginRepositories>
+        <!--      华为云仓库      -->
+        <pluginRepository>
+            <id>huawei</id>
+            <name>huawei nexus</name>
+            <url>https://mirrors.huaweicloud.com/repository/maven/</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+
+        <!--      Spring Milestones      -->
+        <pluginRepository>
+            <id>spring-milestones</id>
+            <name>Spring Milestones</name>
+            <url>https://repo.spring.io/milestone</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+
+        <!--      阿里云仓库      -->
+        <pluginRepository>
+            <id>aliyun nexus</id>
+            <name>aliyun nexus</name>
+            <url>https://maven.aliyun.com/repository/public</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+
+        <!--      Maven 仓库      -->
+        <pluginRepository>
+            <id>central</id>
+            <name>Maven Central</name>
+            <url>https://repo1.maven.org/maven2</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+</project>

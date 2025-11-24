@@ -1,0 +1,46 @@
+# =========================== spring 配置 ===========================
+spring:
+  datasource:
+    dynamic:
+      seata: true
+      # 设置默认的数据源或者数据源组,默认值即为 master
+      primary: master
+      datasource:
+        # 主库数据源
+        master:
+          type: ${spring.datasource.type}
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          url: ${datasource.system-master.url}
+          username: ${datasource.system-master.username}
+          password: ${datasource.system-master.password}
+  ai:
+    openai:
+      enable: true
+      api-key: sk-6nJCoOgA33qmRaNaTWfZSMAZnMK79TDRYPQ43kJaI0I887tz
+      base-url: https://api.chatanywhere.tech
+      chat:
+        options:
+          model: gpt-3.5-turbo
+    dashscope:
+      enable: true
+      api-key: sk-af8f2018db6740bb880a4f6961427557
+      chat:
+        options:
+          model: qwen-max
+      image:
+        options:
+          model: wanx-v1
+    qianfan:
+      enable: false
+      api-key: bce-v3/ALTAK-ruQ4aoi44Jo8kab36Gx81/424efd3f10ad0df43b3e2151355517ae86c3d44d
+      secret-Key: 5f1529263bb445a890454f87816f4c5f
+      chat:
+        options:
+          model:
+    ollama:
+      enable: false
+      api-key:
+      base-url: http://211.64.41.234:11434/
+      chat:
+        options:
+          model:

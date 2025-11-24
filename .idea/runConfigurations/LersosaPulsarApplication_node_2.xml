@@ -1,0 +1,19 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="LersosaPulsarApplication-node-2" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" folderName="lersosa-service-cluster">
+    <envs>
+      <env name="SERVER_PORT" value="9406" />
+    </envs>
+    <module name="lersosa-service-pulsar-start" />
+    <option name="SHORTEN_COMMAND_LINE" value="ARGS_FILE" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="leyramu.framework.lersosa.pulsar.LersosaPulsarApplication" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="leyramu.framework.lersosa.pulsar.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
